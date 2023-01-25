@@ -11,3 +11,4 @@ eureka:
     fetch-registry: true
     service-url: # ??? ??? ??
         defaultZone: http://127.0.0.1:8761/eureka
+#  mvnw spring-boot:run -Dspring-boot.run.jvmArguments='-Dserver.port=9003'
