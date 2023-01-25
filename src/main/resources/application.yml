@@ -6,9 +6,11 @@ spring:
     name: user-service
 
 eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}} # 인스턴스 id 추가
   client:
     register-with-eureka: true # Eureka ????? ?????? ??? ????? ??? ??? ??
     fetch-registry: true
     service-url: # ??? ??? ??
-        defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
 #  mvnw spring-boot:run -Dspring-boot.run.jvmArguments='-Dserver.port=9003'
